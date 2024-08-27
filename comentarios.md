@@ -135,7 +135,7 @@ rails db:rollback STEP=2
 
 ## Librerias
 
-Las librerias o plugins aqui son llamados gemas y existe un [archivo](Gemfile) para declarar todas aquellas que se vayan a utilizar, para agregar alguna solo se debe de usar la palabra clave `gem` seguido por el nombre de esta en formato string `"nombre"`, igualmente si se desea se puede especificar la version a usar con `, "~> version"`, de no hacerlo usa por default la ultima, en el archivo hay 2 bloques, `development` y `development` test como su nombre lo indica aquellas gemas que se declaren dentro de estos se usaran unicamente en dichos escenarios, aquellas que no esten en ninguno se usaran siempre
+Las librerias o plugins aqui son llamados gemas y existe un [archivo](Gemfile) para declarar todas aquellas que se vayan a utilizar, para agregar alguna solo se debe de usar la palabra clave `gem` seguido por el nombre de esta en formato string `"nombre"`, igualmente si se desea se puede especificar la version a usar con `, "~> version"`, de no hacerlo usa por default la ultima, en el archivo hay 2 bloques, `development` y `development test` test como su nombre lo indica aquellas gemas que se declaren dentro de estos se usaran unicamente en dichos escenarios, aquellas que no esten en ninguno se usaran siempre
 
 ```rb
 gem 'nombre'
