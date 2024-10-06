@@ -10,6 +10,8 @@ Rails.application.routes.draw do
         get :ecategories
         get :icategories
         get :always_ok
+        get :incomes
+        get :expenses
       end
 
       post 'authenticate', to: 'authentication#create'
