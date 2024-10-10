@@ -39,13 +39,13 @@ class Api::V1::FhController < ApplicationController
     Array.new(_length) { |i| {
       id: i+1, 
       amount: Random.rand(1..843),
+      jobName: "trabajo #{i+1}",
       day_week: Random.rand(1..7),
       day_month: Random.rand(1..30),
-      jobName: "trabajo #{i+1}",
-      income_category: "categoria #{Random.rand(1..20)}",
-      income_concept: "concepto #{Random.rand(1..20)}",
-      income_certainly: "certeza #{Random.rand(1..20)}",
-      income_frequency: "frecuencia #{Random.rand(1..20)}"
+      fk_income_category_id: Random.rand(1..20),
+      fk_income_concept_id: Random.rand(1..20),
+      fk_income_certainly_id: Random.rand(1..20),
+      fk_income_frequency_id: Random.rand(1..20)
     }}
   end
   def build_expense(_length)
@@ -64,10 +64,10 @@ class Api::V1::FhController < ApplicationController
       description: "gasto #{i+1}",
       type: type_options["#{Random.rand(1..3)}"],
       decreasing_percentage: Random.rand(1..10),
-      expense_category: "categoria #{Random.rand(1..20)}",
-      expense_food: "comida #{Random.rand(1..20)}",
-      expense_service: "servicio #{Random.rand(1..20)}",
-      expense_frequency: "frecuencia #{Random.rand(1..20)}"
+      fk_expense_category_id: Random.rand(1..20),
+      fk_expense_food_id: Random.rand(1..20),
+      fk_expense_service_id: Random.rand(1..20),
+      fk_expense_frequency_id: Random.rand(1..20)
     }}
   end
 end
