@@ -58,6 +58,7 @@ class Api::V1::FhController < ApplicationController
 
     Array.new(_length) { |i| {
       id: i+1, 
+      expense_name: "expense #{i+1}",
       amount: Random.rand(1..843),
       day_week: Random.rand(1..7),
       day_month: Random.rand(1..30),
